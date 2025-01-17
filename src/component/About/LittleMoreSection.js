@@ -1,6 +1,11 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
+import { BsTwitterX } from "react-icons/bs";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebook } from "react-icons/fa";
+import { GoArrowUpRight } from "react-icons/go";
 
 
 const LittleMoreSection = () => {
@@ -28,20 +33,59 @@ const LittleMoreSection = () => {
           </div>
           <img src="/image/horizontal_divider.svg" className="mt-[59px]" />
 
-          <div className="flex justify-between px-[50px] pt-[40px]">
+          <div className="flex justify-between px-[50px] py-[40px]">
             <h5 className="text-[25px] font-bold w-[155px] relative ">
               <span className="flex items-center gap-1">
-              Find us on <FaHeart className="text-red-500" /> 
+                Find us on <FaHeart className="text-red-500" />
               </span>
-              
               social media
             </h5>
 
-            <div>
+            <div className="flex items-center gap-3">
+              <a
+                href=""
+                className="border border-[#D3D3D3] text-[#5B5B5B] rounded-[40px] px-[10px] py-[7px] flex items-center gap-1"
+              >
+                <FaLinkedin />
+                LinkedIn
+                <GoArrowUpRight />
+              </a>
 
-                <div>
+              <a
+                href=""
+                className="border border-[#D3D3D3] text-[#5B5B5B] rounded-[40px] px-[10px] py-[7px] flex items-center gap-1"
+              >
+                <SiGmail />
+                Mail
+                <GoArrowUpRight />
+              </a>
 
-                </div>
+              <a
+                href=""
+                className="border border-[#D3D3D3] text-[#5B5B5B] rounded-[40px] px-[10px] py-[7px] flex items-center gap-1"
+              >
+                <BsTwitterX />
+                X
+                <GoArrowUpRight />
+              </a>
+
+              <a
+                href=""
+                className="border border-[#D3D3D3] text-[#5B5B5B] rounded-[40px] px-[10px] py-[7px] flex items-center gap-1"
+              >
+                <AiFillInstagram />
+                Instagram
+                <GoArrowUpRight />
+              </a>
+
+              <a
+                href=""
+                className="border border-[#D3D3D3] text-[#5B5B5B] rounded-[40px] px-[10px] py-[7px] flex items-center gap-1"
+              >
+                <FaFacebook />
+                Facebook
+                <GoArrowUpRight />
+              </a>
             </div>
           </div>
         </div>

@@ -1,12 +1,8 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
 
 * {
   margin: 0;
@@ -30,4 +26,77 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Inter", serif;
+}
+
+.animationAboutCard {
+  top: 0px;
+  left: -30px;
+  position: inherit;
+  z-index: -1;
+  animation: cloudmarquee 400s linear infinite;
+  animation-direction: alternate;
+  z-index: 1;
+}
+.animationAboutCard2 {
+  bottom: -30px;
+  right: -30px;
+  position: inherit;
+  z-index: 2;
+  width: 240px;
+  height: 250px;
+  animation: cloudmarquee 400s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes cloudmarquee {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+.bigSliderAnimation {
+  position: inherit;
+  right: -100px;
+  animation: cloudmarquee 35s linear infinite;
+}
+.bigSliderAnimation2 {
+  bottom: 140px;
+  right: -100px;
+  position: inherit;
+  animation: cloudmarquee 35s linear infinite;
+  animation-delay: 3s;
+}
+.smallSliderAnimation {
+  bottom: 104px;
+  right: 0px;
+  position: inherit;
+  animation: cloudmarquee2 10s linear infinite;
+}
+.smallSliderAnimation2 {
+  top: 44px;
+  right: 50px;
+  position: inherit;
+  animation: cloudmarquee2 10s linear infinite;
+  animation-delay: 3s;
+}
+.acadmicAnimaton {
+  animation: logoScroll 150s linear;
+  animation-iteration-count: infinite;
+}
+.acadmicAnimatonReverse {
+  animation: logoScroll 150s linear;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes logoScroll {
+  0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(-1000%);
+}
 }
