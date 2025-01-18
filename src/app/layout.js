@@ -8,6 +8,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import BgVideo from "@/component/reuseable/BgVideo";
+import Footer from "@/component/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
 const geistSans = Geist({
@@ -71,15 +72,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-     
+
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
         <BgVideo />
         <div id="main">
-        {children}
-        
-      </div>
+          {children}
+
+        <Footer />
+        </div>
       </body>
     </html>
   );
