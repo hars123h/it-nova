@@ -29,9 +29,8 @@ body {
   background: var(--background);
   font-family: "Inter", serif;
   height: 100%;
-  box-sizing: border-box;
-  scroll-behavior: auto;
   width: 100%;
+  overflow-y: hidden;
 }
 
 .animationAboutCard {
