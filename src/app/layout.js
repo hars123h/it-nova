@@ -34,8 +34,8 @@ export default function RootLayout({ children }) {
           <div id="main" className=" relative z-10">
           {children}
           </div>
-        </Loco>
         <Footer />
+        </Loco>
       </body>
     </html>
   );
