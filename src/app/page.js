@@ -9,7 +9,7 @@ export default function Home() {
     <div className=" relative min-h-[200vh] ">
       <Hero />
       <div className=" mt-[100px] max-w-[1200px] mx-auto ">
-      <LogoScroll />
+        <LogoScroll />
       </div>
     </div>
   );
