@@ -1,8 +1,5 @@
-"use client";
 import Hero from "@/component/Home/Hero";
-import BgVideo from "@/component/reuseable/BgVideo";
 import LogoScroll from "@/component/reuseable/companyAnimation/LogoScroll";
-import { ScrollTrigger } from "gsap/all";
 
 export default function Home() {
   return (

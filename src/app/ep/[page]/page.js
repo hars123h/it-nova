@@ -4,7 +4,7 @@ const EliteProgram = () => {
   return (
     <>
     <div>
-        salfdj lmnsafdlm
+        <p className=' flex items-center justify-center  w-full h-screen'>loremfdskfdsfsd</p>
     </div>
     </>
   )
