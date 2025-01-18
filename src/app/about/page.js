@@ -11,8 +11,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <>
-    {/* <BgVideo /> */}
+    <div className=" pb-[100px]">
+    
       <HeroAbout />
       <div className="px-[140px] overflow-hidden">
         <LogoScroll />
@@ -22,7 +22,7 @@ const About = () => {
       <FeatureCard />
       <MotivatedCard />
       <WorkWithUs />
-    </>
+    </div>
   );
 };
 

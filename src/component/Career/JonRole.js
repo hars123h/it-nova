@@ -6,7 +6,7 @@ import JonRoleCard from "./JonRoleCard";
 const JonRole = () => {
   return (
     <>
-      <div className="px-[140px] mt-[131px] mb-[244px]">
+      <div className="px-[140px] mt-[131px]">
         <p className="text-sm font-bold tracking-[3px]">JOB ROLES</p>
         <h5 className="text-[55px] font-bold w-[295px] mt-[50px] leading-[60px] -tracking-[1px]">
           Latest jobs for you

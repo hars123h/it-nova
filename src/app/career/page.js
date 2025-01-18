@@ -6,14 +6,14 @@ import ScrollableCareer from "@/component/Career/ScrollableCareer";
 
 const Career = () => {
   return (
-    <>
+    <div className=" pb-[100px] ">
       <HeroCareer />
       <ScrollableCareer />
       <MakingBetter />
       <CareerCard />
       <div id="jobOffers"></div>
       <JonRole />
-    </>
+    </div>
   );
 };
 export default Career;

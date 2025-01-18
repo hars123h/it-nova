@@ -4,7 +4,7 @@ import React from "react";
 const WorkWithUs = () => {
   return (
     <>
-      <div className="px-[140px] mt-[174px] mb-[236px]">
+      <div className="px-[140px] mt-[174px]">
         <div className="w-full rounded-[20px] flex border border-[#D3D3D3] bg-white">
           <div className="p-[40px] w-fit">
             <p className="text-sm font-bold tracking-[3px]">WORK WITH US</p>

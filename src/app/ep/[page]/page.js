@@ -5,7 +5,7 @@ import React from 'react'
 
 const EpicProgram = () => {
   return (
-    <div className='relative'>
+    <div className='relative pb-[100px] '>
         <EliteHero />
         <EliteOverview />
         <EliteSyllabusContent />

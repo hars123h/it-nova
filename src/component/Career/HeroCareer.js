@@ -6,6 +6,7 @@ const HeroCareer = () => {
     <>
       <div className="pt-[184px]  flex  items-center flex-col relative text-center">
         <img
+        data-scroll  data-scroll-speed="4"
           src="/image/about-banner.png"
           className="absolute bottom-[113px] w-[807px] h-[476px]"
           style={{
