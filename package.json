@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.12.7",
     "install": "^0.13.0",
+    "locomotive-scroll": "^4.1.4",
     "next": "15.1.4",
     "npm": "^11.0.0",
     "react": "^19.0.0",

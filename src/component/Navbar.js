@@ -15,7 +15,7 @@ const Navbar = () => {
     const active = 'style="border: 1.5px solid rgb(212, 212, 212); background-color: rgb(246, 246, 246); box-shadow: rgb(233, 233, 233) 0px -5px 1px inset; color: rgb(0, 0, 0);"'
 
     return (
-        <div>
+        <>
             <header className="header-desktop gap-4 h-fit p-[40px_140px_0px_140px] flex justify-between items-center fixed w-full z-[999]">
 
                 <div className="header-left-side h-fit flex items-center justify-between w-[831px] bg-[rgba(233,233,233,0.7)] border border-[rgba(211,211,211,1)] 
@@ -25,7 +25,7 @@ const Navbar = () => {
                         <Image src={require('../../public/image/ITNOVA.svg')} loading="lazy" className="rinex-header-logo transition ease duration-1000 delay-0 w-[101px] h-[26px] " alt="" />
                     </Link>
 
-                    <Link id="headerHome" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0 " href="/"
+                    <div id="headerHome" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0 " href="/"
                         onMouseEnter={() => setEliteOpen(true)}
                         onMouseLeave={() => setEliteOpen(false)}>
                         Elite
@@ -109,13 +109,13 @@ const Navbar = () => {
 
                         </div>
 
-                    </Link>
+                    </div>
 
                     <Link className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0" id="headerAbout" href="/about">
                         About
                     </Link>
 
-                    <Link id="btnHeadProgram" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0" href="/"
+                    <div id="btnHeadProgram" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0" href="/"
                         onMouseEnter={() => setProgramOpen(true)}
                         onMouseLeave={() => setProgramOpen(false)}
                     >
@@ -153,8 +153,8 @@ const Navbar = () => {
                                         <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-medium text-[rgba(135,135,135,1)]">Computer Science/Information Science</h6>
                                     </div>
 
-                                    <div id="cs-program-link" className={`program-sublink-container-cs absolute right-[-335px]
-                                    bottom-[-320px] pl-[13px] ${cScience ? 'block' : 'hidden'}`}>
+                                    <div id="cs-program-link" className={`program-sublink-container-cs absolute right-[-375px]
+                                    bottom-[-360px] pl-[13px] ${cScience ? 'block' : 'hidden'}`}>
 
                                         <div className="program-sublink-menu rounded-[20px] border border-[rgba(211,211,211,1)] 
                                         bg-white p-[20px] w-[334px]">
@@ -228,7 +228,7 @@ const Navbar = () => {
                                         <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-medium text-[rgba(135,135,135,1)]">Civil Engineering</h6>
                                     </div>
 
-                                    <div id="civil-program-link" className={`program-sublink-container-civil absolute right-[-335px]
+                                    <div id="civil-program-link" className={`program-sublink-container-civil absolute right-[-375px]
                                     bottom-[-50px] pl-[13px] ${cEnginer ? 'block' : 'hidden'} `}>
 
                                         <div className="program-sublink-menu rounded-[20px] border border-[rgba(211,211,211,1)] 
@@ -261,7 +261,7 @@ const Navbar = () => {
                                         <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-medium text-[rgba(135,135,135,1)]">Electronics &amp; Communication Engineering</h6>
                                     </div>
 
-                                    <div id="extc-program-link" className={`program-sublink-container-extc absolute right-[-335px]
+                                    <div id="extc-program-link" className={`program-sublink-container-extc absolute right-[-375px]
                                     bottom-[-60px] pl-[13px] ${ece ? 'block' : 'hidden'}`}>
 
                                         <div className="program-sublink-menu rounded-[20px] border border-[rgba(211,211,211,1)] 
@@ -297,7 +297,7 @@ const Navbar = () => {
                                         <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-medium text-[rgba(135,135,135,1)]">Mechanical Engineering</h6>
                                     </div>
 
-                                    <div id="mech-program-link" className={`program-sublink-container-mech absolute right-[-335px]
+                                    <div id="mech-program-link" className={`program-sublink-container-mech absolute right-[-375px]
                                     bottom-[-70px] pl-[13px] ${mech ? 'block' : 'hidden'}`}>
 
                                         <div className="program-sublink-menu rounded-[20px] border border-[rgba(211,211,211,1)] 
@@ -324,7 +324,7 @@ const Navbar = () => {
 
                             </div>
                         </div>
-                    </Link>
+                    </div>
 
                     <Link id="headerCareer" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0" href="/career">
                         Career
@@ -376,20 +376,20 @@ const Navbar = () => {
                         <img className="rinex-header-logo" alt="" />
                     </a>
                     <button className="btn-header-menu">
-                        <img src="" alt="" />
+                        {/* <img src="" alt="" /> */}
                     </button>
                 </div>
             </header>
 
-            <div id="headerMainMenu" style={{ marginTop: "0px;" }}>
+            <div id="headerMainMenu" style={{ marginTop: "0px", display: "none" }}>
                 <div>
                     <div>
-                        <div id="headerContainerMobile" style={{ padding: "35px;" }}>
+                        <div id="headerContainerMobile" style={{ padding: "35px" }}>
                             <a href="/">
                                 <img className="rinex-header-logo" alt="" />
                             </a>
                             <button className="btn-header-menu-close">
-                                <img src="" alt="" />
+                                {/* <img src="" alt="" /> */}
                             </button>
                         </div>
                         <div className="menu-category-contianer">
@@ -437,7 +437,7 @@ const Navbar = () => {
                         </a>
                     </div>
                     <div id="program-categories-modal-section" style={{ display: "none" }}>
-                        <div id="program-categories-modal" style={{ display: "flex;" }}>
+                        <div id="program-categories-modal" style={{ display: "flex" }}>
                             <div className="program-modal-head"><div>
                                 <p className="program-menu-para">PROGRAMS</p>
                                 <h6 className="program-menu-heading">See all programs</h6>
@@ -470,21 +470,21 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                        <div id="program-subcategories-modal" style={{ display: "none;" }}>
+                        <div id="program-subcategories-modal" style={{ display: "none" }}>
                             <div className="program-modal-head">
                                 <img className="subCatArrow" alt="" />
                                 <p className="program-menu-para"></p>
                             </div>
                             <img src="/images/hor_devider.svg" alt="" />
                             <a className="program-categories" href="/program/0">
-                                <img src="" alt="" />
+                                {/* <img src="" alt="" /> */}
                                 <div>
                                     <h6 className="program-menu-option"></h6>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div id="elite-modal-section" style={{ display: "block;" }}>
+                    <div id="elite-modal-section" style={{ display: "block" }}>
                         <div id="elite-modal">
                             <div className="elite-modal-head">
                                 <div className="elite-modal-head-left">
@@ -521,7 +521,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-        </div>
+        </>
     )
 }
 
