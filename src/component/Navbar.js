@@ -1,19 +1,22 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import React, { useRef, useState } from 'react'
 
 const Navbar = () => {
 
     const closeTimeout = useRef(null);
     const closeTimeout2 = useRef(null);
+    const pathname = usePathname();
+    const router = useRouter();
 
-    const [eliteOpen, setEliteOpen] = useState(false)
-    const [programOpen, setProgramOpen] = useState(false)
-    const [cScience, setCScience] = useState(false)
-    const [cEnginer, setCEnginer] = useState(false)
-    const [ece, setEce] = useState(false)
-    const [mech, setMech] = useState(false)
+    const [eliteOpen, setEliteOpen] = useState(false);
+    const [programOpen, setProgramOpen] = useState(false);
+    const [cScience, setCScience] = useState(false);
+    const [cEnginer, setCEnginer] = useState(false);
+    const [ece, setEce] = useState(false);
+    const [mech, setMech] = useState(false);
 
     const active = 'style="border: 1.5px solid rgb(212, 212, 212); background-color: rgb(246, 246, 246); box-shadow: rgb(233, 233, 233) 0px -5px 1px inset; color: rgb(0, 0, 0);"'
 
@@ -50,13 +53,15 @@ const Navbar = () => {
             <header className="header-desktop gap-4 h-fit p-[40px_140px_0px_140px] flex justify-between items-center fixed w-full z-[999]">
 
                 <div className="header-left-side h-fit flex items-center justify-between w-[831px] bg-[rgba(233,233,233,0.7)] border border-[rgba(211,211,211,1)] 
-                rounded-[90px] p-[6.5px_8px_6.5px_21px] text-lg font-normal backdrop-blur-[80px] transition ease duration-1000 delay-0 relative z-[4] ">
+                rounded-[90px] p-[4px_8px_4px_21px] text-lg font-normal backdrop-blur-[80px] transition ease duration-1000 delay-0 relative z-[4] ">
 
                     <Link href={'/'}>
-                        <Image src={require('../../public/image/ITNOVA.svg')} loading="lazy" className="rinex-header-logo transition ease duration-1000 delay-0 w-[101px] h-[26px] " alt="" />
+                        <Image src={require('../../public/image/IT-removebg-preview.png')} loading="lazy" className="rinex-header-logo transition ease duration-1000 delay-0 w-[80px] h-[40px] " alt="" />
                     </Link>
 
-                    <div id="headerHome" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0 " href="/"
+                    <div id="headerHome" className={`nav-link no-underline cursor-pointer text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0 
+                    ${pathname == '/' && 'border-[1.5px] border-[#d4d4d4] bg-[#f6f6f6] shadow-[inset_0_-5px_1px_rgb(233,233,233)] text-black'}`}
+                        onClick={() => { pathname !== '/' && router.push('/') }}
                         onMouseEnter={() => handleMouseEnter('elite')}
                         onMouseLeave={() => handleMouseLeave('elite')}
                     >
@@ -88,54 +93,54 @@ const Navbar = () => {
 
                                 </div>
 
-                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/DSAPython.html">
+                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/DSAPython">
 
                                     <Image src={require("../../public/image/pythonElite.png")} className='ml-[10px]' width={40} alt="" />
 
                                     <div>
-                                        <h6 className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-medium ml-5 text-[gray]">Data Structures and Algorithms with Python</h6>
+                                        <p className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-semibold ml-5 text-[gray]">Data Structures and Algorithms with Python</p>
                                     </div>
 
                                 </Link>
 
-                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/DSAPython.html">
+                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/DSAJava">
 
                                     <Image src={require("../../public/image/javaElite.png")} className='ml-[10px]' width={40} alt="" />
 
                                     <div>
-                                        <h6 className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-medium ml-5 text-[gray]">Data Structures and Algorithms with Java</h6>
+                                        <h6 className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-semibold ml-5 text-[gray]">Data Structures and Algorithms with Java</h6>
                                     </div>
 
                                 </Link>
 
-                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/DSAPython.html">
+                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/DSAC++">
 
                                     <Image src={require("../../public/image/c++Elite.png")} className='ml-[10px]' width={40} alt="" />
 
                                     <div>
-                                        <h6 className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-medium ml-5 text-[gray]">
+                                        <h6 className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-semibold ml-5 text-[gray]">
                                             Data Structures and Algorithms with C++</h6>
                                     </div>
 
                                 </Link>
 
-                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/DSAPython.html">
+                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/uiux">
 
                                     <Image src={require("../../public/image/uiuxElite.png")} className='ml-[10px]' width={40} alt="" />
 
                                     <div>
-                                        <h6 className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-medium ml-5 text-[gray]">
+                                        <h6 className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-semibold ml-5 text-[gray]">
                                             UI/UX</h6>
                                     </div>
 
                                 </Link>
 
-                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/DSAPython.html">
+                                <Link className="nav-sub-link-elite mt-[25px] flex items-center no-underline" href="/ep/digitalmarketing">
 
                                     <Image src={require("../../public/image/digitalmarketingElite.png")} className='ml-[10px]' width={40} alt="" />
 
                                     <div>
-                                        <h6 className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-medium ml-5 text-[gray]">Digital Marketing</h6>
+                                        <h6 className="elite-submenu-option hover:text-black flex justify-center items-center text-[15px] font-semibold ml-5 text-[gray]">Digital Marketing</h6>
                                     </div>
 
                                 </Link>
@@ -146,11 +151,16 @@ const Navbar = () => {
 
                     </div>
 
-                    <Link className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0" id="headerAbout" href="/about">
+                    <Link className={`nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0
+                    ${pathname == '/about' && 'border-[1.5px] border-[#d4d4d4] bg-[#f6f6f6] shadow-[inset_0_-5px_1px_rgb(233,233,233)] text-black'}`}
+                        id="headerAbout" href="/about"
+                    >
                         About
                     </Link>
 
-                    <div id="btnHeadProgram" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0" href="/"
+                    <div id="btnHeadProgram" className={`nav-link no-underline cursor-pointer text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0
+                    ${pathname == '/program' && 'border-[1.5px] border-[#d4d4d4] bg-[#f6f6f6] shadow-[inset_0_-5px_1px_rgb(233,233,233)] text-black'}`}
+                        onClick={() => { pathname !== '/' && router.push('/') }}
                         onMouseEnter={() => handleMouseEnter('program')}
                         onMouseLeave={() => handleMouseLeave('program')}
                     >
@@ -188,7 +198,7 @@ const Navbar = () => {
 
                                     <div>
 
-                                        <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-medium text-[rgba(135,135,135,1)]">Computer Science/Information Science</h6>
+                                        <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-semibold text-[rgba(135,135,135,1)]">Computer Science/Information Science</h6>
                                     </div>
 
                                     <div id="cs-program-link" className={`program-sublink-container-cs absolute right-[-375px]
@@ -198,7 +208,7 @@ const Navbar = () => {
                                         bg-white p-[20px] w-[334px]">
 
                                             <div className='mb-[21px]'>
-                                                <p className="sublink-menu-para text-[10px] font-bold text-black tracking-[3px]">COMPUTER SCIENCE / INFORMATION SCIENCE</p>
+                                                <p className="sublink-menu-para text-[10px] font-bold text-black tracking-[3px] leading-none">COMPUTER SCIENCE / INFORMATION SCIENCE</p>
                                             </div>
 
                                             <Link className="nav-sub-link mt-[20px] flex items-center no-underline mb-[21px] " href="/program/1">
@@ -263,7 +273,7 @@ const Navbar = () => {
                                     <Image src={require("../../public/image/civil_logo.svg")} className='ml-[10px] mr-[16px]' width={40} alt="" />
 
                                     <div>
-                                        <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-medium text-[rgba(135,135,135,1)]">Civil Engineering</h6>
+                                        <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-semibold text-[rgba(135,135,135,1)]">Civil Engineering</h6>
                                     </div>
 
                                     <div id="civil-program-link" className={`program-sublink-container-civil absolute right-[-375px]
@@ -273,7 +283,7 @@ const Navbar = () => {
                                         bg-white p-[20px] w-[334px]">
 
                                             <div className='mb-[21px]'>
-                                                <p className="sublink-menu-para text-[10px] font-bold text-black tracking-[3px]">CIVIL ENGINEERING</p>
+                                                <p className="sublink-menu-para text-[10px] font-bold text-black tracking-[3px] leading-none">CIVIL ENGINEERING</p>
                                             </div>
 
                                             <Link className="nav-sub-link mt-[20px] flex items-center no-underline" href="/program/6">
@@ -296,7 +306,7 @@ const Navbar = () => {
                                     <Image src={require("../../public/image/extc_logo.svg")} className='ml-[10px] mr-[16px]' width={40} alt="" />
 
                                     <div>
-                                        <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-medium text-[rgba(135,135,135,1)]">Electronics &amp; Communication Engineering</h6>
+                                        <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-semibold text-[rgba(135,135,135,1)]">Electronics &amp; Communication Engineering</h6>
                                     </div>
 
                                     <div id="extc-program-link" className={`program-sublink-container-extc absolute right-[-375px]
@@ -306,7 +316,7 @@ const Navbar = () => {
                                         bg-white p-[20px] w-[334px]">
 
                                             <div className='mb-[21px]'>
-                                                <p className="sublink-menu-para text-[10px] font-bold text-black tracking-[3px]">Electronics &amp; Communication Engineering</p>
+                                                <p className="sublink-menu-para text-[10px] font-bold text-black tracking-[3px] leading-none">Electronics &amp; Communication Engineering</p>
                                             </div>
                                             <Link className="nav-sub-link mt-[20px] flex items-center no-underline" href="/program/7">
 
@@ -332,7 +342,7 @@ const Navbar = () => {
                                     <Image src={require("../../public/image/mech_logo.svg")} className='ml-[10px] mr-[16px]' width={40} alt="" />
 
                                     <div>
-                                        <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-medium text-[rgba(135,135,135,1)]">Mechanical Engineering</h6>
+                                        <h6 className="program-menu-option hover:text-black text-[16px] tracking-[-1px] font-semibold text-[rgba(135,135,135,1)]">Mechanical Engineering</h6>
                                     </div>
 
                                     <div id="mech-program-link" className={`program-sublink-container-mech absolute right-[-375px]
@@ -342,7 +352,7 @@ const Navbar = () => {
                                         bg-white p-[20px] w-[334px]">
 
                                             <div className='mb-[21px]'>
-                                                <p className="sublink-menu-para text-[10px] font-bold text-black tracking-[3px]">Mechanical Engineering</p>
+                                                <p className="sublink-menu-para text-[10px] font-bold text-black tracking-[3px] leading-none">Mechanical Engineering</p>
                                             </div>
 
                                             <Link className="nav-sub-link mt-[20px] flex items-center no-underline" href="/program/8">
@@ -364,16 +374,22 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    <Link id="headerCareer" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0" href="/career">
+                    <Link id="headerCareer" className={`nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0
+                    ${pathname == '/career' && 'border-[1.5px] border-[#d4d4d4] bg-[#f6f6f6] shadow-[inset_0_-5px_1px_rgb(233,233,233)] text-black'}`}
+                        href="/career">
                         Career
-                        <p className="hiring-chip text-[10px] font-medium text-[rgba(135,135,135,1)] bg-black rounded ml-[9px] transition ease duration-1000 delay-0 h-5 flex items-center justify-center p-1">
+                        <p className="hiring-chip text-[7px] xl:text-[10px] font-medium text-[rgba(135,135,135,1)] bg-black rounded ml-[9px] transition ease duration-1000 delay-0 h-5 flex items-center justify-center p-1">
                             <span>
                                 WE ARE HIRING
                             </span>
                         </p>
                     </Link>
 
-                    <Link href="/#blogNav" id="headerBlogs" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0">Blogs</Link>
+                    <Link href="/blogNav" id="headerBlogs" className={`nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0
+                    ${pathname == '/blogNav' && 'border-[1.5px] border-[#d4d4d4] bg-[#f6f6f6] shadow-[inset_0_-5px_1px_rgb(233,233,233)] text-black'}`}
+                    >
+                        Blogs
+                    </Link>
 
                 </div>
 
@@ -393,7 +409,7 @@ const Navbar = () => {
                     </button> */}
 
 
-                    <button className="btn-signUp flex justify-center items-center text-lg font-normal text-black rounded-[130px] p-[19px_20px_19px_22px] mr-[10px] transition ease duration-1000 delay-0 bg-[rgba(233,233,233,0.7)] backdrop-blur-[80px] border-none">
+                    <button className="btn-signUp flex justify-center items-center text-lg font-normal text-black rounded-[130px] p-[19px_20px_19px_22px] mr-[10px] transition ease duration-1000 delay-0 bg-[rgba(233,233,233,0.7)] backdrop-blur-[80px] border-none whitespace-nowrap">
                         <Image src={require("../../public/image/person_icon.b6fd4cef071015312a7e.svg")} className="person-icon mr-[7px] " alt="" />
                         Sign Up
                     </button>
