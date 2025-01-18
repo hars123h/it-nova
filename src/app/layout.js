@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/component/Navbar";
 import "./loco.css";
 import BgVideo from "@/component/reuseable/BgVideo";
 import Loco from "@/component/Loco";
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         <BgVideo />
         <Loco >
           <div id="main" className=" relative z-10">
