@@ -1,9 +1,12 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 const Navbar = () => {
+
+    const closeTimeout = useRef(null);
+    const closeTimeout2 = useRef(null);
 
     const [eliteOpen, setEliteOpen] = useState(false)
     const [programOpen, setProgramOpen] = useState(false)
@@ -13,6 +16,34 @@ const Navbar = () => {
     const [mech, setMech] = useState(false)
 
     const active = 'style="border: 1.5px solid rgb(212, 212, 212); background-color: rgb(246, 246, 246); box-shadow: rgb(233, 233, 233) 0px -5px 1px inset; color: rgb(0, 0, 0);"'
+
+    const handleMouseEnter = (div) => {
+        if (div === 'elite') {
+            if (closeTimeout.current) {
+                clearTimeout(closeTimeout.current);
+                closeTimeout.current = null;
+            }
+            setEliteOpen(true);
+        } else {
+            if (closeTimeout2.current) {
+                clearTimeout(closeTimeout2.current);
+                closeTimeout2.current = null;
+            }
+            setProgramOpen(true);
+        }
+    };
+
+    const handleMouseLeave = (div) => {
+        if (div === 'elite') {
+            closeTimeout.current = setTimeout(() => {
+                setEliteOpen(false);
+            }, 100);
+        } else {
+            closeTimeout2.current = setTimeout(() => {
+                setProgramOpen(false);
+            }, 100);
+        }
+    };
 
     return (
         <>
@@ -26,14 +57,18 @@ const Navbar = () => {
                     </Link>
 
                     <div id="headerHome" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0 " href="/"
-                        onMouseEnter={() => setEliteOpen(true)}
-                        onMouseLeave={() => setEliteOpen(false)}>
+                        onMouseEnter={() => handleMouseEnter('elite')}
+                        onMouseLeave={() => handleMouseLeave('elite')}
+                    >
                         Elite
 
                         <Image src={require("../../public/image/down_arrow.svg")} className='ml-[10px]' alt="" />
 
                         <div id="elite-menu-container" className={`menu-container absolute w-[310px] h-fit top-[75px] left-[140px] bg-[rgba(255,255,255,1)] 
-                        p-[0px_30px_20px] border border-[rgb(215,215,215)] rounded-[20px] z-[1000] shadow-custom bottom-[-395px] ${eliteOpen ? 'block' : 'hidden'} `}>
+                        p-[0px_30px_20px] border border-[rgb(215,215,215)] rounded-[20px] z-[1000] shadow-custom bottom-[-395px] ${eliteOpen ? 'block' : 'hidden'} `}
+                            onMouseEnter={() => handleMouseEnter('elite')}
+                            onMouseLeave={() => handleMouseLeave('elite')}
+                        >
 
                             <div className="elite-link-menu flex flex-col">
 
@@ -116,15 +151,18 @@ const Navbar = () => {
                     </Link>
 
                     <div id="btnHeadProgram" className="nav-link no-underline text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0" href="/"
-                        onMouseEnter={() => setProgramOpen(true)}
-                        onMouseLeave={() => setProgramOpen(false)}
+                        onMouseEnter={() => handleMouseEnter('program')}
+                        onMouseLeave={() => handleMouseLeave('program')}
                     >
                         Programs
 
                         <Image src={require("../../public/image/down_arrow.svg")} className='ml-[10px]' alt="" />
 
                         <div id="program-menu-container" className={`menu-container absolute w-[337px] h-fit top-[75px] left-[42%] bg-[rgba(255,255,255,1)] 
-                        p-[0px_30px_20px] border border-[rgb(215,215,215)] rounded-[20px] z-[1000] shadow-custom bottom-[-395px] py-[30px] ${programOpen ? 'block' : 'hidden'}`}>
+                        p-[0px_30px_20px] border border-[rgb(215,215,215)] rounded-[20px] z-[1000] shadow-custom bottom-[-395px] py-[30px] ${programOpen ? 'block' : 'hidden'}`}
+                            onMouseEnter={() => handleMouseEnter('program')}
+                            onMouseLeave={() => handleMouseLeave('program')}
+                        >
 
                             <div className="program-link-menu flex flex-col">
 
