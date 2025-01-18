@@ -1,13 +1,16 @@
+import EliteHero from '@/component/Elite/EliteHero'
+import EliteOverview from '@/component/Elite/EliteOverview'
+import EliteSyllabusContent from '@/component/Elite/EliteSyllabusContent'
 import React from 'react'
 
-const EliteProgram = () => {
+const EpicProgram = () => {
   return (
-    <>
-    <div>
-        salfdj lmnsafdlm
+    <div className='relative'>
+        <EliteHero />
+        <EliteOverview />
+        <EliteSyllabusContent />
     </div>
-    </>
   )
 }
 
-export default EliteProgram;
+export default EpicProgram
