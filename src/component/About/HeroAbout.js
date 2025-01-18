@@ -12,7 +12,7 @@ const HeroAbout = () => {
             Where ideas are talked about and growth is focused upon
           </h5>
         </div>
-        <img src="/image/about-banner.png" className="absolute top-[20px] h-[527px]" 
+        <img src="/image/about-banner.png" data-scroll  data-scroll-speed="4" className="absolute top-[20px] h-[527px]" 
         style={{
             transform: "translateY(0px)"
         }}
