@@ -18,7 +18,6 @@ const Navbar = () => {
     const [ece, setEce] = useState(false);
     const [mech, setMech] = useState(false);
 
-    const active = 'style="border: 1.5px solid rgb(212, 212, 212); background-color: rgb(246, 246, 246); box-shadow: rgb(233, 233, 233) 0px -5px 1px inset; color: rgb(0, 0, 0);"'
 
     const handleMouseEnter = (div) => {
         if (div === 'elite') {

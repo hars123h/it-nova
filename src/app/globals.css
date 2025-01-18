@@ -3,9 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-#main{
+
+#main {
   height: 100%;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-text-color: rgba(0, 0, 0, 1);
+  --primary-border-color: 1px solid rgba(211, 211, 211, 1);
+  --white-bg-color: rgba(255, 255, 255, 1);
+  --primary-para-color: rgba(135, 135, 135, 1);
+  --social-link-color: rgba(91, 91, 91, 1);
+  --hiring-chip-bg-color: rgba(0, 0, 0, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,6 +50,7 @@ body {
   animation-direction: alternate;
   z-index: 1;
 }
+
 .animationAboutCard2 {
   bottom: -30px;
   right: -30px;
@@ -57,6 +66,7 @@ body {
   0% {
     transform: translateX(100px);
   }
+
   100% {
     transform: translateX(-250%);
   }
@@ -67,6 +77,7 @@ body {
   right: -100px;
   animation: cloudmarquee 35s linear infinite;
 }
+
 .bigSliderAnimation2 {
   bottom: 140px;
   right: -100px;
@@ -74,12 +85,14 @@ body {
   animation: cloudmarquee 35s linear infinite;
   animation-delay: 3s;
 }
+
 .smallSliderAnimation {
   bottom: 104px;
   right: 0px;
   position: inherit;
   animation: cloudmarquee2 10s linear infinite;
 }
+
 .smallSliderAnimation2 {
   top: 44px;
   right: 50px;
@@ -87,10 +100,12 @@ body {
   animation: cloudmarquee2 10s linear infinite;
   animation-delay: 3s;
 }
+
 .acadmicAnimaton {
   animation: logoScroll 150s linear;
   animation-iteration-count: infinite;
 }
+
 .acadmicAnimatonReverse {
   animation: logoScroll 150s linear;
   animation-direction: reverse;
@@ -100,8 +115,260 @@ body {
 @keyframes logoScroll {
   0% {
     transform: translateX(0);
-}
-100% {
+  }
+
+  100% {
     transform: translateX(-1000%);
+  }
 }
+
+@keyframes textanimate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: -400%;
+  }
+}
+
+.textbackgroud {
+  background: linear-gradient(to right, black, rgba(66, 133, 244, 1), black);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textanimate 5s linear infinite;
+}
+
+.site-map-section {
+  display: flex;
+  border: var(--primary-border-color);
+  background-color: var(--white-bg-color);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.site-map-para,
+.site-coffee-para {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--primary-text-color);
+}
+
+.site-map-heading {
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--primary-text-color);
+  width: 250px;
+  margin-top: 30px;
+  margin-bottom: 140px;
+}
+
+.site-map-para,
+.site-coffee-para {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--primary-text-color);
+}
+
+.footer-adress {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary-para-color);
+  margin-top: 32px;
+  width: 250px;
+  line-height: 19px;
+}
+
+.site-map-right-side {
+  display: flex;
+  gap: 70px;
+  /* border: 1px solid red; */
+}
+
+.site-map-right-side ul {
+  list-style-type: none;
+  max-width: 194px;
+}
+
+.link-heading {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--primary-text-color) !important;
+  margin-bottom: 40px !important;
+  letter-spacing: 3px !important;
+}
+
+.site-map-right-side ul li {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--primary-para-color);
+}
+
+.site-map-right-side ul li:not(:nth-last-child(1)) {
+  margin-bottom: 24px;
+}
+
+.nav-foot-link {
+  all: unset;
+  cursor: pointer;
+}
+
+.site-coffee-para-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1026px) {
+  .site-coffee-para-mobile {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--primary-text-color);
+  }
+}
+
+.footer-adress-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1026px) {
+  .footer-adress-mobile {
+    display: block;
+    margin-top: -30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-para-color);
+    line-height: 19px;
+  }
+}
+
+.social-media-section {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: var(--primary-border-color);
+  background-color: var(--white-bg-color);
+  padding: 36px 40px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.social-media-heading {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--primary-text-color);
+  width: 155px;
+  position: relative;
+}
+
+@keyframes heart {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
+}
+
+.red-heart {
+  animation-name: heart;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  /* position: absolute; */
+  margin-left: 10px;
+  animation-timing-function: ease-out;
+  top: 5px;
+}
+
+.social-nav-link {
+  text-decoration: none;
+  border: var(--primary-border-color);
+  color: var(--social-link-color);
+  border-radius: 40px;
+  padding: 7px 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-nav-link:not(:nth-last-child(1)) {
+  margin-right: 30px;
+}
+
+.social-nav-link img:nth-child(1) {
+  margin-right: 6px;
+}
+
+.copyright-section {
+  border-radius: 20px;
+  border: var(--primary-border-color);
+  padding: 20px 40px;
+  background-color: var(--white-bg-color);
+  margin-top: 20px;
+  display: flex
+;
+  justify-content: space-between;
+}
+
+.copyright-para {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary-para-color);
+}
+
+.copyright-nav-container {
+  display: flex
+;
+  gap: 47px;
+}
+
+.copyright-nav-container a {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary-para-color);
+  text-decoration: none;
+}
+
+.footer-brand-banner-section {
+  margin-top: 166px;
+  /* border: 1px solid red; */
+}
+
+.footer-slogan {
+  color: rgba(218, 218, 219, 1);
+  font-size: 23px;
+  font-weight: 700;
+  margin-left: 73px;
+}
+
+.footer-brand-banner-section > img {
+  width: 100%;
+  object-fit: contain;
+  /* border: 1px solid red; */
+}
+
+.hiring-chip {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--primary-para-color);
+  background-color: var(--hiring-chip-bg-color);
+  padding: 4px;
+  border-radius: 4px;
+  margin-left: 9px;
+  transition: 1s;
 }

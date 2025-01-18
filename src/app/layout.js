@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/component/Navbar";
 import "./loco.css";
 import BgVideo from "@/component/reuseable/BgVideo";
+import Footer from "@/component/Footer";
+gsap.registerPlugin(ScrollTrigger);
 import Loco from "@/component/Loco";
 
 const geistSans = Geist({
@@ -34,6 +36,7 @@ export default function RootLayout({ children }) {
           {children}
           </div>
         </Loco>
+        <Footer />
       </body>
     </html>
   );
