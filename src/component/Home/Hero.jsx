@@ -71,7 +71,7 @@ function Hero() {
           data-scroll
           data-scroll-speed="4"
           loading="lazy"
-          className=" absolute z-10 bottom-[-44px] left-[175px]"
+          className=" absolute z-10 bottom-[-5px] left-[175px]"
           src="/image/Homepage/google_review_chip.svg"
           alt=""
         />
