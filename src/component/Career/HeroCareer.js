@@ -22,7 +22,7 @@ const HeroCareer = () => {
         </h5>
 
         <p className="mt-[119px] text-[16px] leading-[19px] text-paraColor w-[560px]">
-          The word perfection defines everything about Rinex. We tend to provide
+          The word perfection defines everything about It Nova. We tend to provide
           what's best available to our students and help them attain the
           knowledge they always wanted.
         </p>

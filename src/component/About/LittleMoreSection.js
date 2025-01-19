@@ -18,11 +18,11 @@ const LittleMoreSection = () => {
           </p>
           <div className="mt-[50px] flex justify-between px-[40px]">
             <h4 className="w-[450px] leading-[60px] font-bold text-[55px]">
-              Some Words about Rinex
+              Some Words about It Nova
             </h4>
 
             <p className="w-[400px] text-[16px] text-paraColor">
-              Rinex is an online Education platform, providing students with
+              It Nova is an online Education platform, providing students with
               pristine study opportunities and a chance to learn and grow.
               Started with a vision to solve problems of students and make them
               job ready or exceptional in their fields. With our extensive

@@ -66,7 +66,7 @@ const CareerCard = () => {
           </h5>
 
           <p className="text-[15px] mt-[30px]  text-paraColor ">
-            Rinex has always been very focused on Placements of students at
+            It Nova has always been very focused on Placements of students at
             their desired companies and institutions. Because, your skills land
             you a dream job not just dreams. And for that we're here to build
             your skills at the same time council you for the Placements. So that
