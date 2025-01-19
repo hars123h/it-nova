@@ -3,10 +3,21 @@
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { usePathname } from "next/navigation";
+import Aos from "aos";
 
 export default function LocomotiveScrollProvider({ children }) {
+
   const pathname = usePathname();
   const refScrollContainer = useRef();
+
+  useEffect(()=>{
+    // Aos.init({
+    //   offset: 200,
+    //   duration: 200,
+    //   easing: 'ease-in-sine',
+    //   delay: 100,
+    // });
+  },[])
   useEffect(() => {
     let scrollInstance;
   
@@ -53,5 +64,5 @@ export default function LocomotiveScrollProvider({ children }) {
   }, [pathname]);
   
 
-  return <div className=" pb-[40px] " ref={refScrollContainer} data-scroll-container>{children}</div>;
+  return <div className=" pb-[40px] " ref={refScrollContainer}  data-scroll-container>{children}</div>;
 }

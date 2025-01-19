@@ -22,20 +22,27 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
- 
   return (
     <html lang="en">
+      <head>
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"/>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"></link>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
         <BgVideo />
-        <Loco >
+        <Loco>
           <div id="main" className=" relative z-10">
-          {children}
+            {children}
           </div>
-        <Footer />
+          <Footer />
         </Loco>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>AOS.init()</script>
       </body>
     </html>
   );

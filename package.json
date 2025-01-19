@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "aos": "^2.3.4",
     "gsap": "^3.12.7",
     "install": "^0.13.0",
+    "lenis": "^1.1.19",
     "locomotive-scroll": "^4.1.4",
     "next": "15.1.4",
     "npm": "^11.0.0",
