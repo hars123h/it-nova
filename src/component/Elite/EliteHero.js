@@ -7,7 +7,6 @@ import { FaDownload } from "react-icons/fa6";
 import { FaBuilding } from "react-icons/fa6";
 import { VscMute } from "react-icons/vsc";
 
-
 const EliteHero = () => {
   return (
     <>
@@ -93,15 +92,20 @@ const EliteHero = () => {
           </div>
           <div className="w-[45%] relative p-[10px] rounded-[6px] bg-white  group ">
             <div className="rounded-[10px] p-[12px]">
-                <video id="scrollVideo" src="/image/javaherosectionvideo.mp4" autoPlay muted loop className="w-full h-[400px] object-cover rounded-[20px]" >
+              <video
+                id="scrollVideo"
+                src="/image/javaherosectionvideo.mp4"
+                autoPlay
+                muted
+                loop
+                className="w-full h-[400px] object-cover rounded-[20px]"
+              ></video>
 
-                </video>
-
-                <button className="rounded-[50%] text-white cursor-pointer hidden absolute h-[40px] w-[40px] top-[80%] left-[85%] padding-[10px] group-hover:block  bg-[rgba(255,255,255,0.7)] backdrop-blur-[1px]">
-                    <div className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-[#ecf0f1] text-white">
-                        <VscMute />
-                    </div>
-                </button>
+              <button className="rounded-[50%] text-white cursor-pointer hidden absolute h-[40px] w-[40px] top-[80%] left-[85%] padding-[10px] group-hover:block  bg-[rgba(255,255,255,0.7)] backdrop-blur-[1px]">
+                <div className="w-[40px] h-[40px] rounded-full flex justify-center items-center bg-[#ecf0f1]  text-white">
+                  <VscMute />
+                </div>
+              </button>
             </div>
           </div>
         </div>

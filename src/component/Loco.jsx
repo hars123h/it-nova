@@ -53,5 +53,5 @@ export default function LocomotiveScrollProvider({ children }) {
   }, [pathname]);
   
 
-  return <div ref={refScrollContainer} data-scroll-container>{children}</div>;
+  return <div className=" pb-[40px] " ref={refScrollContainer} data-scroll-container>{children}</div>;
 }
