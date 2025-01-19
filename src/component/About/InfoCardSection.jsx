@@ -9,11 +9,11 @@ const InfoCardSection = () => {
             WHEN IT STARTED
           </p>
           <h5 className="text-[35px] font-bold leading-[38px] mt-[30px]">
-            Rinex was found in 2020
+            It Nova was found in 2020
           </h5>
 
           <p className="text-lg mt-[30px] leading-[19px] text-paraColor -tracking-[0.5px]">
-            Rinex was founded in India, With a vision to be the best and make
+            It Nova was founded in India, With a vision to be the best and make
             the best.
           </p>
 

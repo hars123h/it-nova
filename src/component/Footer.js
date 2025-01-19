@@ -9,8 +9,8 @@ const Footer = () => {
 
             <footer className='p-[0px_140px_0px_140px]'>
 
-                <div className="slogan-container rounded-[20px] border border-[rgba(211,211,211,1)] w-full flex justify-between items-center p-[52px_68px_52px_50px] bg-[rgba(255,255,255,1)] transition ease duration-1000 delay-0">
-                    <Image src={require('../../public/image/IT-removebg-preview.png')} loading="lazy" className="rinex-header-logo transition ease duration-1000 delay-0 w-[120px] h-[60px] " alt="" />
+                <div className="slogan-container rounded-[20px] border border-[rgba(211,211,211,1)] w-full flex justify-between items-center p-[0px_68px_0px_50px] bg-[rgba(255,255,255,1)] transition ease duration-1000 delay-0">
+                    <Image src={require('../../public/image/IT-removebg-preview.png')} loading="lazy" className="rinex-header-logo transition ease duration-1000 delay-0 w-[250px] h-[180px] " alt="" />
                     <h6 className="sloag-heading text-[45px] font-bold bg-clip-text text-black textbackgroud" >Educate.Improve.Inspire</h6>
                 </div>
 
@@ -20,7 +20,7 @@ const Footer = () => {
                         <h6 className="site-map-heading">Find all our links here</h6>
                         <p className="site-coffee-para">MEET FOR A COFFEE HERE</p>
                         <p className="footer-adress">
-                            Rinex Technologies Pvt. Ltd. Enzyme Tech Park, 1113, 6th Main Rd, Syndicate Bank Colony, Sector 7, HSR Layout, Bengaluru, Karnataka 560102
+                            It Nova Technologies Pvt. Ltd. Enzyme Tech Park, 1113, 6th Main Rd, Syndicate Bank Colony, Sector 7, HSR Layout, Bengaluru, Karnataka 560102
                         </p>
                     </div>
                     <div className="site-map-right-side">
@@ -101,7 +101,7 @@ const Footer = () => {
                             </li>
                         </ul>
                         <p className="site-coffee-para-mobile">MEET FOR A COFFEE HERE</p>
-                        <p className="footer-adress-mobile">Rinex Technologies Pvt. Ltd. Enzyme Tech Park, 1113, 6th Main Rd, Syndicate Bank Colony, Sector 7, HSR Layout, Bengaluru, Karnataka 560102</p>
+                        <p className="footer-adress-mobile">It Nova Technologies Pvt. Ltd. Enzyme Tech Park, 1113, 6th Main Rd, Syndicate Bank Colony, Sector 7, HSR Layout, Bengaluru, Karnataka 560102</p>
                     </div>
                 </div>
                 <div className="social-media-section">
@@ -149,7 +149,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-brand-banner-section">
                     <p className="footer-slogan">EDUCATE. IMPROVE. INSPIRE</p>
-                    <Image src={require("../../public/image/rinex_footer_banner.png")} alt="" />
+                    {/* <Image src={require("../../public/image/rinex_footer_banner.png")} alt="" /> */}
                 </div>
             </footer>
 

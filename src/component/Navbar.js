@@ -55,7 +55,7 @@ const Navbar = () => {
                 rounded-[90px] p-[4px_8px_4px_21px] text-lg font-normal backdrop-blur-[80px] transition ease duration-1000 delay-0 relative z-[4] ">
 
                     <Link href={'/'}>
-                        <Image src={require('../../public/image/IT-removebg-preview.png')} loading="lazy" className="rinex-header-logo transition ease duration-1000 delay-0 w-[80px] h-[40px] " alt="" />
+                        <Image src={require('../../public/image/IT-removebg-preview.png')} loading="lazy" className="rinex-header-logo transition ease duration-1000 delay-0 w-[80px] h-[57px] " alt="" />
                     </Link>
 
                     <div id="headerHome" className={`nav-link no-underline cursor-pointer text-[#878787] p-[13.5px_16px] rounded-[130px] flex items-center justify-center transition ease duration-1000 delay-0 
